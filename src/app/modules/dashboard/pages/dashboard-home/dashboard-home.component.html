@@ -1,0 +1,9 @@
+<app-toolbar-navigation>
+
+</app-toolbar-navigation>
+
+@if(productList$ | async; as products){
+  @for(product of products; track product.id) {
+    <div>{{product | json}}</div>
+  }
+}
